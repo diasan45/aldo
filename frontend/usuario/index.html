@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación</title>
+    <link rel="stylesheet" href="/frontend/usuario/estilos.css">
+    
+</head>
+<body>
+
+  <header class="logo">
+    <h1>MADELIITA DETAILS</h1>
+  </header>
+
+<div class="navegacion">
+    <nav>
+        <div class="menu-hamburguesa" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li>
+                <a href="#">Categorías</a>
+                <div class="dropdown">
+                    <a href="#">Categoría 1</a>
+                    <a href="#">Categoría 2</a>
+                    <a href="#">Categoría 3</a>
+                </div>
+            </li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Carrito</a></li>
+        </ul>
+
+        <div class="buscador">
+            <input type="text" placeholder="Buscar...">
+            <button>Buscar</button>
+        </div>
+
+        <div class="auth-buttons">
+            <a href="#">Iniciar Sesión</a>
+            <a href="#">Crear Cuenta</a>
+        </div>
+    </nav>
+</div>
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.navegacion nav ul');
+        menu.classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>
