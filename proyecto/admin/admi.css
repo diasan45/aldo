@@ -139,3 +139,73 @@ body {
         margin-bottom: 20px;
     }
 }
+
+
+/* Estilos responsive */
+.CRUD {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.CRUD label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #555;
+}
+
+.CRUD input[type="text"],
+.CRUD input[type="number"],
+.CRUD input[type="file"],
+.CRUD select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.CRUD input[type="text"]:focus,
+.CRUD input[type="number"]:focus,
+.CRUD input[type="file"]:focus,
+.CRUD select:focus {
+    border-color: #007bff;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.CRUD input[type="file"] {
+    padding: 8px;
+}
+
+.CRUD select {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.CRUD select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
