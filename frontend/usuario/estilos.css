@@ -1,3 +1,4 @@
+/* Reset y configuración base */
 * {
     margin: 0;
     padding: 0;
@@ -5,20 +6,52 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px; /* Añade un espacio alrededor del contenido del body */
-    background-color: #f4f4f4; /* Color de fondo opcional para que el contenido resalte */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
 }
-.navegacion {
+
+/* Logo y encabezado */
+.logo {
+    text-align: center;
     background-color: #5f1a8e;
-    padding: 10px;
-    border-radius: 15px;
+    color: white;
+    padding: 40px 20px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 4px;
+    position: relative;
+}
+
+.logo h1 {
+    font-size: 42px;
+    font-weight: 700;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.logo:hover h1 {
+    transform: scale(1.05);
+    letter-spacing: 6px;
+}
+
+/* Barra de navegación */
+.navegacion {
+    background-color: #4b0e6f;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navegacion nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .navegacion nav ul {
@@ -28,7 +61,7 @@ body {
 }
 
 .navegacion nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
     position: relative;
 }
 
@@ -36,239 +69,157 @@ body {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s ease; /* Transición para el efecto hover */
-}
-
-/* Efecto hover para los enlaces */
-.navegacion nav ul li a:hover {
-    color: #ddd; /* Cambiar color al pasar el ratón */
-}
-
-/* Estilo para el menú desplegable */
-.navegacion nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #2c0943;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.navegacion nav ul li:hover .dropdown {
-    display: block;
-}
-
-.navegacion nav ul li .dropdown a {
-    display: block;
-    padding: 5px 0;
-    color: white;
-    transition: color 0.3s ease; /* Transición para el efecto hover en el dropdown */
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.navegacion {
-    background-color: #5f1a8e;
-    padding: 10px;
-}
-
-.navegacion nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navegacion nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-.navegacion nav ul li {
-    margin: 0 15px;
-    position: relative;
-    transition: transform 0.3s ease; /* Transición para agrandar */
-}
-
-.navegacion nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease, transform 0.3s ease; /* Transición de color y tamaño */
-}
-
-/* Efecto hover para los enlaces: agrandar */
-.navegacion nav ul li:hover {
-    transform: scale(1.1); /* Agranda un poco */
-}
-
-/* Efecto hover para los enlaces */
-.navegacion nav ul li a:hover {
-    color: #ddd; /* Cambiar color al pasar el ratón */
-}
-
-/* Estilo para el menú desplegable */
-.navegacion nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #2c0943;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.navegacion nav ul li:hover .dropdown {
-    display: block;
-}
-
-.navegacion nav ul li .dropdown a {
-    display: block;
-    padding: 5px 0;
-    color: white;
+    font-weight: 500;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efecto hover para los enlaces dentro del dropdown */
-.navegacion nav ul li .dropdown a:hover {
+.navegacion nav ul li a:hover {
     color: #ddd;
-    transform: scale(1.1); /* Agranda un poco */
+    transform: scale(1.1);
 }
 
-/* Estilo para el buscador */
+/* Dropdown Estilo */
+.navegacion nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6e2177;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navegacion nav ul li:hover .dropdown {
+    display: block;
+}
+
+.navegacion nav ul li .dropdown a {
+    color: white;
+    font-size: 14px;
+    display: block;
+    padding: 8px 0;
+}
+
+.navegacion nav ul li .dropdown a:hover {
+    color: #ddd;
+}
+
+/* Buscador */
 .navegacion .buscador input[type="text"] {
-    padding: 5px;
+    padding: 8px;
     border-radius: 5px;
     border: 1px solid #ddd;
+    font-size: 14px;
 }
 
 .navegacion .buscador button {
-    padding: 5px 10px;
-    border: none;
+    padding: 8px 12px;
     background-color: #390e56;
     color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-/* Efecto hover para el botón de buscar */
 .navegacion .buscador button:hover {
     background-color: #521b7e;
-    transform: scale(1.1); /* Agranda un poco */
 }
 
+/* Autenticación */
 .navegacion .auth-buttons a {
     color: white;
-    margin-left: 15px;
+    margin-left: 20px;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-/* Efecto hover para los botones de autenticación */
 .navegacion .auth-buttons a:hover {
     color: #ddd;
-    transform: scale(1.1); /* Agranda un poco */
 }
 
-/* Estilos responsive */
+/* Menú hamburguesa */
 .menu-hamburguesa {
     display: none;
     cursor: pointer;
 }
 
 .menu-hamburguesa div {
-    width: 25px;
+    width: 30px;
     height: 3px;
     background-color: white;
-    margin: 5px 0;
-    transition: transform 0.3s ease;
+    margin: 6px 0;
+    transition: all 0.3s ease;
 }
 
-/* Ocultar menú en pantallas pequeñas */
-@media (max-width: 880px) {
+/* Efecto animación hamburguesa */
+.menu-hamburguesa.active div:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-hamburguesa.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburguesa.active div:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-hamburguesa {
+        display: block;
+    }
+
     .navegacion nav ul {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #5f1a8e;
+        background-color: #4b0e6f;
         position: absolute;
         top: 60px;
         left: 0;
-        padding: 20px;
         text-align: center;
-    }
-
-    .navegacion nav ul li {
-        margin: 10px 0;
+        padding: 20px 0;
     }
 
     .navegacion nav ul.show {
         display: flex;
     }
 
-    .menu-hamburguesa {
-        display: block;
+    .navegacion nav ul li {
+        margin: 10px 0;
+    }
+
+    .buscador {
+        margin-top: 20px;
+    }
+
+    .auth-buttons {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .auth-buttons a {
+        margin-bottom: 10px;
     }
 }
-/* Efecto hover para los enlaces dentro del dropdown */
-.navegacion nav ul li .dropdown a:hover {
-    color: #ddd; /* Cambiar color al pasar el ratón */
-}
 
-/* Estilo para el buscador */
-.navegacion .buscador input[type="text"] {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
+/* Extra ajuste para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 32px;
+    }
 
-.navegacion .buscador button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #390e56;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición para el efecto hover */
-}
+    .navegacion .buscador input[type="text"] {
+        width: 100%;
+    }
 
-/* Efecto hover para el botón de buscar */
-.navegacion .buscador button:hover {
-    background-color: #521b7e; /* Cambiar color de fondo al pasar el ratón */
-}
-
-.navegacion .auth-buttons a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease; /* Transición para el efecto hover */
-}
-
-/* Efecto hover para los botones de autenticación */
-.navegacion .auth-buttons a:hover {
-    color: #ddd; /* Cambiar color al pasar el ratón */
-}
-
-
-/* LOGO */
-
-.logo {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(135deg, #5f1a8e, #9c27b0); /* Fondo degradado elegante */
-    box-shadow: 0px 4px 10px rgba(255, 245, 245, 0.2); /* Sombra sutil */
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
+    .navegacion .auth-buttons a {
+        margin-left: 0;
+    }
 }
