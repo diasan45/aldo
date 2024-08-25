@@ -16,24 +16,27 @@ if ($conn->connect_error) {
 }
 
 // Recibir datos del formulario
-$user = $_POST['Usuario'];
-$pass = $_POST['Contraseña'];
+$user = $_POST['username'];
+$pass = $_POST['password'];
 
 // Proteger contra SQL Injection
 $user = $conn->real_escape_string($user);
 $pass = $conn->real_escape_string($pass);
 
 // Consultar base de datos
-$sql = "SELECT * FROM admins WHERE usuario='$user' AND Contraseña='$pass'";
+$sql = "SELECT * FROM admins WHERE usuario='$user' AND contraseña='$pass'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Login exitoso
     $_SESSION['admin'] = $user;
-    header("Location: dashboard.php"); // Redirigir al dashboard
+    header("Location: admin.html"); // Redirigir a admin.html
+    exit();
 } else {
     // Login fallido
-    echo "Usuario o contraseña incorrectos";
+    $error = "Usuario o contraseña incorrectos";
+    header("Location: login_admin.php?error=" . urlencode($error)); // Redirigir al login con mensaje de error
+    exit();
 }
 
 $conn->close();
